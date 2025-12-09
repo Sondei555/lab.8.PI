@@ -1,16 +1,70 @@
+<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторна робота 10</title>
+    <title>Лабораторна робота: Time, Date, OOP</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Лабораторна робота 10</h1>
-    <ul>
-        <li><a href="task1.html">Завдання 1</a></li>
-        <li><a href="task2.html">Завдання 2</a></li>
-        <li><a href="task3.html">Завдання 3</a></li>
-    </ul>
 
+    <h1>Лабораторна робота: Об'єктний та Часовий Функціонал (JavaScript)</h1>
+
+    <div class="task-section">
+        <h2>Завдання 1: Об'єкт Час</h2>
+        <div id="output-time-current">Початковий час: 20:30:45</div>
+        
+        <label for="sec-input">Введіть кількість секунд для додавання/віднімання:</label>
+        <input type="number" id="sec-input" value="30">
+        
+        <button onclick="displayTime()">1.1. Показати поточний час</button>
+        <button onclick="changeTime()">1.2. Змінити час</button>
+        <div id="output-time" class="result"></div>
+    </div>
+    
+    <div class="task-section">
+        <h2>Завдання 2: Робота з Датою</h2>
+        
+        <h3>Завдання 2.1. Виведення поточної дати, дня тижня і часу</h3>
+        <button onclick="displayCurrentDate()">Виконати</button>
+        <div id="output-date" class="result"></div>
+
+        <hr>
+        
+        <h3>Завдання 2.2: Останній день місяця</h3>
+        <label for="year-input">Рік:</label>
+        <input type="number" id="year-input" value="2025" min="1900">
+        <label for="month-input">Номер місяця (1-12):</label>
+        <input type="number" id="month-input" value="10" min="1" max="12">
+        <button onclick="getLastDayOfMonth()">Визначити останній день</button>
+        <div id="output-last-day" class="result"></div>
+        
+        <hr>
+        
+        <h3>Завдання 2.3: Секунди до/від початку дня</h3>
+        <button onclick="displaySecondsInfo()">Виконати</button>
+        <div id="output-sec-info" class="result"></div>
+    </div>
+
+    <div class="task-section">
+        <h2>Завдання 3-6: Класи Car, ElectricCar та Індивідуальне Завдання</h2>
+        
+        <h3>Індивідуальне Завдання (Варіант 1: Прямокутник)</h3>
+        <form id="individual-form">
+            <label>Введіть назву фігури:</label>
+            <input type="text" id="figure-name" value="Прямокутник">
+            <label>Введіть довжину (см):</label>
+            <input type="number" id="figure-length" value="10" min="1">
+            <label>Введіть ширину (см):</label>
+            <input type="number" id="figure-width" value="5" min="1">
+            <label>Введіть колір:</label>
+            <input type="text" id="figure-color" value="Синій">
+            
+            <button type="button" onclick="showIndividualInfo()">Показати інформацію</button>
+            <button type="button" onclick="clearIndividualFields()">Очистити поля</button>
+        </form>
+        <div id="output-individual" class="result"></div>
+    </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>
